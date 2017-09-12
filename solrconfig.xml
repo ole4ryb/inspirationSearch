@@ -830,7 +830,7 @@
 
   <initParams path="/update/**,/query,/select,/tvrh,/elevate,/spell,/browse">
     <lst name="defaults">
-      <str name="df">_text_</str>
+      <str name="df">message_quote</str>
     </lst>
   </initParams>
 
@@ -1214,27 +1214,7 @@
         <str>yyyy-MM-dd HH:mm</str>
         <str>yyyy-MM-dd</str>
       </arr>
-    </processor>
-    <processor class="solr.AddSchemaFieldsUpdateProcessorFactory">
-      <str name="defaultFieldType">strings</str>
-      <lst name="typeMapping">
-        <str name="valueClass">java.lang.Boolean</str>
-        <str name="fieldType">boolean</str>
-      </lst>
-      <lst name="typeMapping">
-        <str name="valueClass">java.util.Date</str>
-        <str name="fieldType">tdate</str>
-      </lst>
-      <lst name="typeMapping">
-        <str name="valueClass">java.lang.Long</str>
-        <str name="valueClass">java.lang.Integer</str>
-        <str name="fieldType">tlong</str>
-      </lst>
-      <lst name="typeMapping">
-        <str name="valueClass">java.lang.Number</str>
-        <str name="fieldType">tdouble</str>
-      </lst>
-    </processor>
+    </processor>    
     <processor class="solr.LogUpdateProcessorFactory"/>
     <processor class="solr.DistributedUpdateProcessorFactory"/>
     <processor class="solr.RunUpdateProcessorFactory"/>
