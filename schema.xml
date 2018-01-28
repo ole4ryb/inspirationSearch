@@ -4,7 +4,8 @@
    
 
    <field name="_version_" type="plong" indexed="true" stored="true"/>
-   <field name="id" type="string" indexed="true" stored="true" required="true" /> 
+   <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
+   <field name="message_id" type="string" indexed="true" stored="true" required="true" /> 
    <field name="quote_id" type="plong" indexed="true" stored="false" />   
    <field name="message_title" type="string" indexed="true" stored="true" docValues="false" />
    <field name="message_preacher" type="string" indexed="true" stored="true" docValues="false" />
